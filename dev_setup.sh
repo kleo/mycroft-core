@@ -137,18 +137,10 @@ fi
 
 
 function get_YN() {
-    # Loop until the user hits the Y or the N key
-    echo -e -n "Choice [${CYAN}Y${RESET}/${CYAN}N${RESET}]: "
-    while true; do
-        read -N1 -s key
-        case $key in
-        [Yy])
-            return 0
-            ;;
-        [Nn])
-            return 1
-            ;;
-        esac
+      # Loop until the user hits the Y or the N key
+      echo -e -n "Choice [${CYAN}Y${RESET}/${CYAN}N${RESET}]: "
+      while true; do
+        return 0;
     done
 }
 
