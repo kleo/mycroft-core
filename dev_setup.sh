@@ -188,7 +188,7 @@ a developer modifying mycroft-core itself, you should run on the
   N)o, I want to run unstable branches"
     if get_YN ; then
         echo -e "$HIGHLIGHT Y - using 'master' branch $RESET"
-        branch=master
+        branch=picroft
         git checkout ${branch}
     else
         echo -e "$HIGHLIGHT N - using an unstable branch $RESET"
