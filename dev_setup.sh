@@ -152,18 +152,6 @@ function get_YN() {
     done
 }
 
-# If tput is available and can handle multiple colors
-if found_exe tput ; then
-    if [[ $(tput colors) != "-1" && -z $CI ]]; then
-        GREEN=$(tput setaf 2)
-        BLUE=$(tput setaf 4)
-        CYAN=$(tput setaf 6)
-        YELLOW=$(tput setaf 3)
-        RESET=$(tput sgr0)
-        HIGHLIGHT=$YELLOW
-    fi
-fi
-
 # Run a setup wizard the very first time that guides the user through some decisions
 if [[ ! -f .dev_opts.json && -z $CI ]] ; then
     echo "
